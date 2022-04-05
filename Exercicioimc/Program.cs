@@ -6,8 +6,7 @@ namespace Exercicioimc
     {
         static void Main(string[] args)
         {
-            float altura;
-            float peso;
+            float altura, peso;
             float imc;
 
             Console.WriteLine("Seja bem vinde !!!");
@@ -18,10 +17,24 @@ namespace Exercicioimc
             Console.WriteLine("Digite seu peso : ");
             peso = float.Parse(Console.ReadLine());
 
-            imc = peso / (altura * altura ) ;
+            imc = peso / (altura * altura);
 
-            Console.WriteLine("Hey Seu imc é de " + imc);
-
+            if (imc < 18.5)
+            {
+                Console.WriteLine("Você está abaixo do seu peso atual ");
+            }
+            else if (imc < 25)
+            {
+                Console.WriteLine("Seu peso é normal ");
+            }
+            else if (imc < 30)
+            {
+                Console.WriteLine("Você está um acima do peso ");
+            }
+            else if (imc >= 30)
+            {
+                Console.WriteLine("Você está com obesidade ");
+            }
 
         }
     }
